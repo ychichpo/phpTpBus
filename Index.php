@@ -11,28 +11,23 @@ require "Data.php";
 // 3 - Affichage La liste des conducteurs qui ne sont pas affectés à un véhicule
 
 
-foreach ( $orga as $nomOrganisation=> $infoOrga) {
-    echo "L'Organisation <b>" . $nomOrganisation ."</b> s'appele<b>" . $infoOrga->getNom() ."dans la ville : <b>". $infoOrga->getVille() .  "</b><br>";
-    echo "Liste des voitures : <br>";
-    foreach ($infoOrga->getGarage() as $voiture)
-        echo $voiture->getImmatriculation().$voiture->getType();
-        foreach ($conduct as $voiture )
-            echo "Conducteur : <br>";
-            echo $conduct->getNom().$conduct->getPrenom();
+foreach ($orga as $infoOrga)
+{
+    echo "L'organisation : " . $infoOrga->getNom() ."<br/>" ."Ville : ". $infoOrga->getVille() . "<br/>";
+    echo "Liste des voitures :"."<br/>";
+    foreach ($infoOrga->getGarage() as $voitures){
+        echo "Immatriculation : " .$voitures->getImmatriculation() ."<br/>". "Type : ".$voitures->getType()."<br/>"."Statut : ".$voitures->getStatut()."<br/>";
+        echo "Le conducteur : "."<br/>";
+        echo "Prenom : ".$voitures->getConducteur()->getPrenom()."<br/>"."Nom : ".$voitures->getConducteur()->getNom();
+        echo "<br/>";
 
-    echo "<br>";
-
+    }
+    echo "<br/>";
 }
 
 /*
  *
- *
- *
- * echo "L'organisation <b>" . $questionnaire->getOrganisation()->getNom() . "</b> est située à " . $questionnaire->getOrganisation()->getAdresse() . " et compte <b>" . $questionnaire->getOrganisation()->getNbUser() . "</b> utilisateur" . (($questionnaire->getOrganisation()->getNbUser() > 1 ) ? "s" : " ") . "<br>";
-    echo "Liste des utilisateurs du questionnaire : <br>";
-    foreach ($questionnaire->getOrganisation()->getUsers() as $user) {
-        echo "- " . $user->getPrenom() . " " . $user->getNom() . " (" . $user->getEmail() . ")<br>";
-    }
-    echo "<br>";
- *
+ *  foreach ($voitures->getConducteur() as $cond){
+            echo $cond->getPrenom()."<br/>".$cond->getNom();
+        }
  */

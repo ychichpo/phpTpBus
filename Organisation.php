@@ -8,11 +8,10 @@ class Organisation
     private array $garage=[];
 
 
-    public function __construct(string $nom, string $ville, array $garage)
+    public function __construct(string $nom, string $ville)
     {
         $this->nom = $nom;
         $this->ville = $ville;
-        $this->garage = $garage;
     }
 
 

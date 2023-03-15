@@ -14,12 +14,11 @@ class Vehicule
      * @param string $statut
      * @param Conducteur $Conducteur
      */
-    public function __construct(string $immatriculation, string $type, string $statut, Conducteur $Conducteur)
+    public function __construct(string $immatriculation, string $type, string $statut)
     {
         $this->immatriculation = $immatriculation;
         $this->type = $type;
         $this->statut = $statut;
-        $this->Conducteur = $Conducteur;
     }
 
     /**
