@@ -25,9 +25,3 @@ foreach ($orga as $infoOrga)
     echo "<br/>";
 }
 
-/*
- *
- *  foreach ($voitures->getConducteur() as $cond){
-            echo $cond->getPrenom()."<br/>".$cond->getNom();
-        }
- */
