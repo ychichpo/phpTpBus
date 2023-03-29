@@ -25,3 +25,16 @@ foreach ($orga as $infoOrga)
     echo "<br/>";
 }
 
+
+
+echo "<b>Liste des conducteurs non affectes a une voiture : </b>"."<br/>"."<br/>";
+
+foreach ($equipe as $conducteur) {
+    if ($conducteur->isAffecte()==false){
+        echo $conducteur->getNom() ."<br/>";
+    }
+}
+
+
+
+
